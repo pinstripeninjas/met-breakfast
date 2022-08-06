@@ -1,0 +1,7 @@
+flask
+matplotlib
+cartopy
+numpy
+pandas
+metpy
+siphon

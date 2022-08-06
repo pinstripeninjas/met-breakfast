@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Dancing+Script&display=swap");
+
+:root {
+	--text-color: #888;
+	--text-color-light: #aaa;
+	--heading-font: "Dancing Script", cursive;
+	--body-font: "Baloo 2", sans-serif;
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	color: var(--text-color);
+	font-family: var(--body-font);
+}
+
+h1 {
+	font-family: var(--heading-font);
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.loading-msg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 400px;
+	width: 400px;
+	font-size: 2rem;
+	border: 1px solid var(--text-color-light);
+	border-radius: 100%;
+	margin: 20px auto;
+}
+
+.spinner {
+	margin: 0 1rem;
+	width: 50px;
+	height: 50px;
+}
+
+@media (min-width: 1400px) {
+	.container {
+		width: 50%;
+	}
+}
