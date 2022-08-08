@@ -20,3 +20,4 @@ const loadImg = async (containerId) => {
 };
 
 loadImg("skewT");
+loadImg("four_panel");
