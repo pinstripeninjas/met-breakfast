@@ -1,5 +1,3 @@
-proj
-GEOS
 appdirs==1.4.4
 beautifulsoup4==4.11.1
 brotlipy==0.7.0
