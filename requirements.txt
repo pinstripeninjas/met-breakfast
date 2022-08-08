@@ -24,6 +24,7 @@ fonttools=4.34.4=py310h02f21da_0
 freetype=2.10.4=h17b34a0_1
 geos=3.11.0=h9a09cb3_0
 giflib=5.2.1=h27ca646_2
+gunicorn=20.1.0=py310hbe9552e_2
 hdf4=4.2.15=h0ef36ac_3
 hdf5=1.12.2=nompi_h33dac16_100
 idna=3.3=pyhd8ed1ab_0
