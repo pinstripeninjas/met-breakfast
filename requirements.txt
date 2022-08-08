@@ -1,4 +1,4 @@
-proj==8.0.0
+proj
 GEOS
 appdirs==1.4.4
 beautifulsoup4==4.11.1
