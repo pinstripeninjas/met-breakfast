@@ -33,6 +33,9 @@ def draw():
             self.variable = variable
             self.data_var = ds.metpy.parse_cf(chart_vars[self.variable]['var_name'])
             print(self.data_var.dims)
+
+        def set_title_time(self, time): 
+            fig.suptitle(self.data_var.dims[0][0], fontsize=16, y=1.01)
             
         def add_to_fig(self, time_step):
             # create and design basemap for chart
@@ -43,7 +46,11 @@ def draw():
             
             # if need to select certain dim
             if chart_vars[self.variable]['dims']:
-                self.data_var = self.data_var.isel(chart_vars[self.variable]['dims'])
+                # also need check because dims sometimes add a 1
+                for dim in self.data_var.dims:
+                    if chart_vars[self.variable]['dims'] in dim:
+                        temp = { dim: chart_vars[self.variable]['level'] }
+                        self.data_var = self.data_var.isel(temp)
 
             # fix to solve the variations in time, time1, etc and set the time step
             time_var = {}
@@ -86,6 +93,8 @@ def draw():
 
     temp_500 = Chart('temp_500')
     temp_500.add_to_fig(0)
+
+    #temp_500.set_title_time(0)
 
     # Save figure to a temporary buffer.
     buf = BytesIO()

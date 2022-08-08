@@ -1,10 +1,3 @@
-// const skewT = document.createElement("img");
-// skewT.src = "https://picsum.photos/200/301";
-
-// document.querySelector(".empty-box").innerHTML = "";
-// document.querySelector(".empty-box").append(skewT);
-// document.body.append(skewT);
-
 // function to receive img blob from API and display image
 const loadImg = async (containerId) => {
 	const url = `${window.location.origin}/img/${containerId}`;
