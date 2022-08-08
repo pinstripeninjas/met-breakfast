@@ -15,9 +15,15 @@ const loadImg = async (containerId) => {
 		container.innerHTML = imgText;
 	} else {
 		console.log(`HTTP-Error: ${response.status}`);
-		container.innerHTML = `It didn't work :(`;
+		container.innerHTML = `Server was busy, couldn't pull data :(`;
 	}
 };
 
 loadImg("skewT");
 loadImg("four_panel");
+
+// load current date
+const currentDate = new Date();
+document.getElementById("current-date").textContent = new Intl.DateTimeFormat("en-US", {
+	dateStyle: "full",
+}).format(currentDate);

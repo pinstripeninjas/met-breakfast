@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Dancing+Script&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Dancing+Script&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
 
 :root {
-	--text-color: #444;
+	--text-color: #333;
 	--text-color-light: #aaa;
-	--heading-font: "Dancing Script", cursive;
-	--body-font: "Baloo 2", sans-serif;
+	--heading-font: "PT Serif", serif;
+	--body-font: "PT Serif", serif;
 }
 
 body {
@@ -12,10 +13,42 @@ body {
 	height: 100vh;
 	color: var(--text-color);
 	font-family: var(--body-font);
+	background-color: #ededed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+	font-weight: 400;
+}
+
+p {
+	margin: 0 0 1rem 0;
+	text-align: justify;
 }
 
 h1 {
+	font-size: 5.7rem;
 	font-family: var(--heading-font);
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 2.5rem;
+	text-align: center;
+	font-style: italic;
+}
+
+h4 {
+	font-style: italic;
+	font-weight: 700;
+	font-size: 1.8rem;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 img {
@@ -23,7 +56,7 @@ img {
 }
 
 .container {
-	width: 75%;
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -32,10 +65,9 @@ img {
 	align-items: center;
 	justify-content: center;
 	height: 400px;
-	width: 400px;
+	width: 100%;
 	font-size: 2rem;
 	border: 1px solid var(--text-color-light);
-	border-radius: 100%;
 	margin: 20px auto;
 }
 
@@ -45,8 +77,90 @@ img {
 	height: 50px;
 }
 
-@media (min-width: 1400px) {
+.date-details {
+	border-top: 1px solid var(--text-color);
+	border-bottom: 3px solid var(--text-color);
+	font-size: 1rem;
+	display: flex;
+	justify-content: space-between;
+	font-style: italic;
+	margin: 1rem 0 2rem 0;
+	padding: 0.5rem 0;
+}
+
+#current-date {
+	margin-right: 3rem;
+}
+
+.main-content {
+	display: flex;
+}
+
+.left-col {
+	width: calc(18% - 1rem);
+	font-size: 0.7rem;
+	margin-right: 1rem;
+	text-align: justify;
+}
+
+.right-col {
+	width: calc(82% - 1rem);
+	margin-left: 1rem;
+}
+
+.col-2 {
+	display: flex;
+	border-bottom: 3px solid var(--text-color);
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+}
+
+.col-2 .w-25 {
+	width: calc(25% - 1rem);
+}
+
+.col-2 .w-35 {
+	width: calc(35% - 1rem);
+}
+
+.col-2 .w-65 {
+	width: calc(65% - 1rem);
+}
+
+.col-2 .w-75 {
+	width: calc(75% - 1rem);
+}
+
+.ml1 {
+	margin-left: 1rem;
+}
+
+.mr1 {
+	margin-right: 1rem;
+}
+
+.fcst-container {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0;
+}
+
+@media (min-width: 1600px) {
+	.container {
+		width: 65%;
+	}
+}
+
+@media (min-width: 1800px) {
 	.container {
 		width: 50%;
+	}
+}
+
+@media (min-width: 2000px) {
+	.container {
+		width: 40%;
 	}
 }

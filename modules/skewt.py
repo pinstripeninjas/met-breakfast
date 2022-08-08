@@ -51,9 +51,11 @@ def draw():
     mask = p >= 100 * units.hPa
 
     # create plot
-    fig = Figure(figsize=(8, 6))
-    # plt.title('SkewT', loc='right')
+    fig = Figure(figsize=(8, 6), layout='tight')
     skew = plots.SkewT(fig)
+    title_str = 'Tucson Skew-T' + sounding_time.strftime("%a, %B %d, %Y %H")
+    skew.ax.set_title('Tucson Skew-T', loc='left')
+    skew.ax.set_title(f'{sounding_time.strftime("%a, %B %d, %Y %H")}Z', loc='right')
     skew.ax.set_xlim(-50, 50)
     skew.plot_dry_adiabats(linewidth=1)
     skew.plot_moist_adiabats(linewidth=1)
@@ -67,7 +69,7 @@ def draw():
 
     # Save figure to a temporary buffer.
     buf = BytesIO()
-    fig.savefig(buf, format="png")
+    fig.savefig(buf, format='png', transparent='true')
     # Embed the result in the html output.
-    data = base64.b64encode(buf.getbuffer()).decode("ascii")
+    data = base64.b64encode(buf.getbuffer()).decode('ascii')
     return f"<img src='data:image/png;base64,{data}'/>"

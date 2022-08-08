@@ -89,9 +89,9 @@ def draw():
 
     # Save figure to a temporary buffer.
     buf = BytesIO()
-    fig.savefig(buf, format="png")
+    fig.savefig(buf, format='png', transparent='true')
     # Embed the result in the html output.
-    data = base64.b64encode(buf.getbuffer()).decode("ascii")
+    data = base64.b64encode(buf.getbuffer()).decode('ascii')
     return f"<img src='data:image/png;base64,{data}'/>"
 
     #plt.show()
