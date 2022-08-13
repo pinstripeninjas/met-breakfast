@@ -8,7 +8,6 @@ import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 # from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
-import pygrib
 
 # url to best NDFD dataset
 data_url = 'https://thredds.ucar.edu/thredds/catalog/grib/NCEP/NDFD/NWS/CONUS/NOAAPORT/latest.xml?dataset=grib/NCEP/NDFD/NWS/CONUS/NOAAPORT/NDFD_NWS_CONUS_2p5km_20220807_0000.grib2'
